@@ -6,7 +6,7 @@ import TablaPersonas from './components/TablaPersonas';
 
 
 
-
+// esta es la segunda version
 
 
 function App() {
