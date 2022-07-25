@@ -1,0 +1,81 @@
+.formDeForm {
+    padding-left: 15px;
+    padding-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 300px;
+    border: 2px solid rgb(220, 223, 222);
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+
+
+}
+
+.formFormLabel,
+input {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.formFormLabel {
+    color: rgb(56, 56, 56);
+}
+
+.inputFormDeForm {
+    border: none;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    height: 25px;
+    width: 200px;
+}
+
+.inputFormDeForm:hover {
+    border-bottom: 1px solid rgb(99, 97, 97);
+}
+
+
+
+
+.botonadd,
+.botoncancel {
+    width: 70px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    margin-left: 72.5%;
+    background: #02a775;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 6px;
+    border-radius: 4px;
+    border-color: #02a775;
+
+}
+
+.botoncancel {
+    width: 70px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    margin-left: 72.5%;
+    background: #ce0404;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 6px;
+    border-radius: 4px;
+    border-color: #ce0404;
+
+}
+
+.botoncancel:active {
+    background-color: #990606;
+    border-color: #990606;
+}
+
+.botonadd:active {
+    background: #017452;
+    border-color: #017452;
+
+}

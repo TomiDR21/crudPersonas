@@ -1,0 +1,87 @@
+.tablaPersonas {
+    border: 2px solid rgb(224, 220, 220);
+    box-shadow: 2px 2px 7px;
+    border-radius: 7px;
+    font-size: 15px;
+    border-collapse: collapse;
+    position: absolute;
+    left: 31rem;
+    top: 3rem;
+    width: 750px;
+
+
+}
+
+
+.tablaPersonas tr:nth-child(even) {
+    background-color: rgb(231, 231, 231);
+}
+
+/* .tablaPersonas:hover tr td{
+    background-color:rgb(80, 78, 78) ;
+    color: white;
+
+} */
+
+.tablaPersonas .theadTabla tr {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: rgb(81, 216, 171);
+    text-align: left;
+
+}
+
+
+.tablaPersonas tbody tr {
+    border-bottom: 1px solid rgb(216, 216, 216);
+
+}
+
+.tablaPersonas tbody tr:hover {
+    background-color: rgb(102, 102, 102);
+    color: white;
+
+
+}
+
+
+
+
+.tablaPersonas .theadTabla tr th,
+.tablaPersonas tr td {
+    padding: 5px 7px;
+}
+
+.botonedit,
+.botondelete {
+    position: relative;
+    left: 20px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.botonedit {
+    background-color: #043c85;
+    border: 2px solid #043c85;
+    color: white;
+}
+
+
+.botondelete {
+    margin-left: 20px;
+    background-color: #a70303;
+    border: 2px solid #a70303;
+    color: white;
+}
+
+.botonedit:active {
+    background-color: #021e42;
+    border: 2px solid #021e42;
+}
+
+.botondelete:active {
+    background-color: #880000;
+    border: 2px solid #880000;
+}
