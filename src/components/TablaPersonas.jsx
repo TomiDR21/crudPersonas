@@ -15,8 +15,8 @@ const TablaPersonas = ({ listaPersonas, deletePerson, onEdit }) => {
     }
 
 
-    const openEdit = () => {
-        onEdit()
+    const openEdit = (persona) => {
+        onEdit(persona)
     }
 
     return (
@@ -26,7 +26,7 @@ const TablaPersonas = ({ listaPersonas, deletePerson, onEdit }) => {
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Last Name</th>
+                    <th>Last Names</th>
                     <th>E-Mail</th>
                     <th>Country</th>
                     <th></th>
@@ -34,7 +34,7 @@ const TablaPersonas = ({ listaPersonas, deletePerson, onEdit }) => {
             </thead>
 
             <tbody>
-                {listaPersonas.map((persona, index) => (
+                {listaPersonas.map((persona) => (
                     <tr key={`id-${persona.id}`}>
 
                         <td>{persona.id}</td>
@@ -43,8 +43,9 @@ const TablaPersonas = ({ listaPersonas, deletePerson, onEdit }) => {
                         <td>{persona.email}</td>
                         <td>{persona.country}</td>
                         <td>
-                            <button onClick={openEdit} className={styles.botonedit}>Edit</button>
+                            <button onClick={() => openEdit(persona)} className={styles.botonedit}>Edit</button>
                             <button onClick={() => handleDelete(persona.id)} className={styles.botondelete}>Delete</button>
+
                         </td>
                     </tr>))}
             </tbody>

@@ -11,8 +11,15 @@ import TablaPersonas from './components/TablaPersonas';
 
 function App() {
   const [openForm, setOpenForm] = useState(false);
-  const onEdit = () =>{
+  const [personToEdit, setPersonToEdit] = useState();
+
+  const onEdit = (persona) =>{
     setOpenForm(true)
+    setPersonToEdit(persona)
+  }
+
+  const onCancel = () =>{
+    setOpenForm(false)
   }
 
   const [listaPersonas, setListaPersonas] = useState([
@@ -49,11 +56,11 @@ const calculateNewId = () =>{
       return (
         <>
         
-        <Form onAdd={onAdd}  boton="Add" boton2={false} namePlaceholder="Enter name..." lastNamePlaceholder="Enter last name" 
-        emailPlaceholder="Enter E-Mail" countryPlaceholder="Enter Country"/>
+        {!openForm && <Form onAdd={onAdd} showEditOnForm={'false'} showCancel={'true'} namePlaceholder="Enter name..." lastNamePlaceholder="Enter last name" 
+        emailPlaceholder="Enter E-Mail" countryPlaceholder="Enter Country"/>}
 
-        {openForm && <Form boton="Edit" boton2="Cancel" namePlaceholder="Enter new name..." lastNamePlaceholder="Enter new last name" 
-        emailPlaceholder="Enter new E-Mail" countryPlaceholder="Enter new Country"></Form>}
+        {openForm && <Form onCancel={onCancel} showAddOnForm={'false'} boton="Edit" namePlaceholder={false} lastNamePlaceholder={false}
+        emailPlaceholder={false} persona={personToEdit} countryPlaceholder={false}></Form>}
 
         <TablaPersonas onEdit={onEdit} listaPersonas={listaPersonas} deletePerson={deletePerson}/>
         
